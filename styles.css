@@ -1,0 +1,109 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 2.5rem 1rem;
+  background: #f5f3ef;
+  color: #3f3a36;
+  display: flex;
+  justify-content: center;
+}
+
+main { width: 620px; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+h1 { font-size: 1.4rem; font-weight: 600; margin: 0; }
+h2 { font-size: 0.9rem; font-weight: 600; margin: 0 0 0.75rem; color: #6b635c; }
+
+.fecha { margin: 0.25rem 0 0; font-size: 0.85rem; color: #9a918a; }
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border: 1px solid #d9d3cb;
+  border-radius: 0.6rem;
+  background: white;
+  cursor: pointer;
+}
+button:hover:not(:disabled) { background: #efebe5; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.rejilla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 0.9rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid #ebe6df;
+  min-height: 130px;
+}
+
+.tarjeta.ancha { grid-column: span 2; }
+
+.contenido { font-size: 0.95rem; line-height: 1.5; }
+
+/* Estados de cada tarjeta */
+.tarjeta.cargando .contenido,
+.tarjeta.cargando .animo-dias { color: #b3aaa2; font-style: italic; }
+
+.tarjeta.error { border-color: #f0c9c0; background: #fdf7f5; }
+.tarjeta.error .contenido,
+.tarjeta.error .animo-dias { color: #b5634f; font-size: 0.85rem; }
+
+/* Ánimo: barras */
+.animo-dias {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+  height: 110px;
+}
+
+.dia {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 0.35rem;
+}
+
+.barra {
+  width: 100%;
+  border-radius: 0.4rem;
+  background: #a7c4a0;
+  min-height: 4px;
+  transition: height 0.4s;
+}
+
+.etiqueta { font-size: 0.75rem; color: #9a918a; }
+
+/* Resumen */
+.resumen {
+  margin-top: 0.75rem;
+  padding: 1.2rem;
+  border-radius: 0.9rem;
+  background: #e8efe4;
+  border: 1px solid #d5e2cf;
+}
+
+.resumen p { margin: 0; line-height: 1.6; }
+
+.tiempo-carga {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9a918a;
+  font-variant-numeric: tabular-nums;
+}

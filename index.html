@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienestar diario</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="icon.jpg">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Bienestar diario</h1>
+        <p id="fecha" class="fecha"></p>
+      </div>
+      <button id="btn-recargar">Recargar</button>
+    </header>
+
+    <div class="rejilla">
+      <section class="tarjeta" id="tarjeta-clima">
+        <h2>🌤️ Clima</h2>
+        <div class="contenido" id="clima"></div>
+      </section>
+
+      <section class="tarjeta" id="tarjeta-consejo">
+        <h2>💬 Consejo del día</h2>
+        <div class="contenido" id="consejo"></div>
+      </section>
+
+      <section class="tarjeta ancha" id="tarjeta-animo">
+        <h2>🌱 Ánimo de los últimos días</h2>
+        <div class="animo-dias" id="animo"></div>
+      </section>
+    </div>
+
+    <section class="resumen" id="tarjeta-resumen">
+      <h2>Resumen del día</h2>
+      <p id="resumen"></p>
+    </section>
+
+    <p id="tiempo-carga" class="tiempo-carga"></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
